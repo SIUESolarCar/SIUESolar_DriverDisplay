@@ -1,5 +1,9 @@
 import framebuf
 
+# https://lvgl.github.io/lv_img_conv/
+# CF_TRUE_COLOR
+# Binary RGB 565 Swap
+
 data = open('Cyan.bin', 'rb')
 Cyan = bytearray(data.read())
 

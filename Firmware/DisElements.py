@@ -22,6 +22,8 @@ Red = bytearray(data.read())
 data = open('Gray.bin', 'rb')
 Gray = bytearray(data.read())
 
+
+
 #fb = framebuf.FrameBuffer(Cyan, 62, 20, framebuf.RGB565)
 #LCD.blit(fb, 3, 5)
 
@@ -49,6 +51,7 @@ def intensity(LCD, level):
     elif level == 1:
         fb = framebuf.FrameBuffer(Cyan, 62, 20, framebuf.RGB565)
         LCD.blit(fb, 3, 5)
+        cropped_fb = fb.crop(20, 0, 20, 20)
 
         fb = framebuf.FrameBuffer(Gray, 62, 20, framebuf.RGB565)
         LCD.blit(fb, 66, 5)
